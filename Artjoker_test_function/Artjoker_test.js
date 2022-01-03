@@ -54,9 +54,7 @@ function compare1000(array) {
     }
 }
 function compare2000(array) {
-    let sum1 = array[0] + array[1];
-    let sum2 = array[2] + array[3];
-    if (sum2 > sum1) {
+    if (array[0] < array[1] && array[2] < array[3])
         return true;
-    }
 }
+console.log(promo(35787918));
