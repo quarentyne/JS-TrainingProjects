@@ -2,8 +2,9 @@
 
 function promo(code) {
     if (typeof code !== 'number' || Math.ceil(Math.log(code + 1) / Math.LN10) !== 8) {
-        return 'Error';
+        throw new Error('Введен несуществующий промокод');
     }
+
     const arr = [];
     let i = 10000000;
     while (i >= 1) {
