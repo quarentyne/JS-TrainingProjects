@@ -51,10 +51,11 @@ function compare1000(array) {
         if (compare2000(arr)) {
             return 2000;
         } else { return 1000; }
+    } else {
+        throw new Error('Ошибка сравнения')
     }
 }
 function compare2000(array) {
     if (array[0] < array[1] && array[2] < array[3])
         return true;
 }
-console.log(promo(35787918));
