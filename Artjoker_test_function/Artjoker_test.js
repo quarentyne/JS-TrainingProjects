@@ -4,7 +4,6 @@ function promo(code) {
     if (typeof code !== 'number' || Math.ceil(Math.log(code + 1) / Math.LN10) !== 8) {
         throw new Error('Введен несуществующий промокод');
     }
-
     const arr = [];
     let i = 10000000;
     while (i >= 1) {
@@ -24,7 +23,6 @@ function promo(code) {
         return 0;
     }
 }
-
 function compare100(array) {
     let sumOdd = 0;
     let sumEven = 0;
@@ -52,7 +50,7 @@ function compare1000(array) {
             return 2000;
         } else { return 1000; }
     } else {
-        throw new Error('Ошибка сравнения')
+        return 0;
     }
 }
 function compare2000(array) {
