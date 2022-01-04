@@ -17,24 +17,10 @@ function promo(code) {
         return 2000;
     } else if (compare1000(arr) === 1000) {
         return 1000;
-    } else if (compare100(arr)) {
+    } else if (compare1000(arr) === 100) {
         return 100;
     } else {
         return 0;
-    }
-}
-function compare100(array) {
-    let sumOdd = 0;
-    let sumEven = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            sumEven += array[i];
-        } else {
-            sumOdd += array[i];
-        }
-    }
-    if (sumEven > sumOdd) {
-        return true;
     }
 }
 function compare1000(array) {
@@ -50,10 +36,24 @@ function compare1000(array) {
             return 2000;
         } else { return 1000; }
     } else {
-        return 0;
+        return compare100(array) === true ? 100 : 0;
     }
 }
 function compare2000(array) {
     if (array[0] < array[1] && array[2] < array[3])
         return true;
+}
+function compare100(array) {
+    let sumOdd = 0;
+    let sumEven = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            sumEven += array[i];
+        } else {
+            sumOdd += array[i];
+        }
+    }
+    if (sumEven > sumOdd) {
+        return true;
+    }
 }
