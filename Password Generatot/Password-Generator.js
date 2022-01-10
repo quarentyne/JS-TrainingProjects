@@ -16,7 +16,7 @@ function generatePassword(length) {
     let pass = [];
     let nABC = generateRandomNumber(1, length - 2);
     length = length - nABC;
-    let nSymbols = generateRandomNumber(1, length - 2);
+    let nSymbols = generateRandomNumber(1, length - 1);
     length = length - nSymbols;
     for (let i = 1; i <= nABC; i++) {
         pass.push(ABC[generateRandomNumber(0, ABC.length - 1)]);
