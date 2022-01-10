@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(238, 221, 208);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+}
+.bg {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 400px;
+  margin: 200px auto 0 auto;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 15%;
+}
+h2 {
+  margin: 5px 0 15px 0;
+}
+.show-password {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  margin: 15px;
+}
+button {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  background-color: rgb(255, 136, 0);
+
+  border: none;
+  padding: 15px;
+  transition: 0.1s;
+}
+button:active {
+  border: 1px solid rgb(255, 136, 0);
+  box-shadow: rgb(250, 130, 130) 5px 5px 5px;
+}
+.numbers {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}

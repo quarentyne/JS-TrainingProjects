@@ -18,13 +18,13 @@ function generatePassword(length) {
     length = length - nABC;
     let nSymbols = generateRandomNumber(1, length - 2);
     length = length - nSymbols;
-    for (let i = 0; i <= nABC; i++) {
+    for (let i = 1; i <= nABC; i++) {
         pass.push(ABC[generateRandomNumber(0, ABC.length - 1)]);
     }
-    for (let i = 0; i <= nSymbols; i++) {
+    for (let i = 1; i <= nSymbols; i++) {
         pass.push(symbols[generateRandomNumber(0, symbols.length - 1)]);
     }
-    for (let i = 0; i <= length; i++) {
+    for (let i = 1; i <= length; i++) {
         pass.push(abc[generateRandomNumber(0, abc.length - 1)]);
     }
     pass = pass.shuffle();
@@ -35,9 +35,6 @@ function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function generateLength() {
-    //в мин и макс можно будет попробовать передавать значения со страницы сайта
-    let min = 8;
-    let max = 15;
+function generateLength(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
